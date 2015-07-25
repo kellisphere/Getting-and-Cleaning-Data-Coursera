@@ -17,5 +17,32 @@ Extracts only the measurements on the mean and standard deviation for each measu
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names. 
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+CodeBook for Getting and Cleaning Data Peer Assessment
+
+The code file, run_analysis.R performs the five steps described in the project instructions:
+
+Merges the training and the test sets to create one data set.
+Extracts only the measurements on the mean and standard deviation for each measurement.
+Uses descriptive activity names to name the activities in the data set
+Appropriately labels the data set with descriptive variable names.
+From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+For step one, the following data sets were merged into one:
+
+X_test.txt
+X_train.txt
+y_train.txt
+y_test.txt
+subject_train.txt
+subject_test.txt
+features.txt
+activity_labels.txt
+
+For step two, Extracts only the measurements on the mean and standard deviation for each measurement (columns that contained std or mean in title were extracted and used).
+
+For step three - the data set was merged with activity_labels file to use descriptive names for the activities.
+
+For step four - merged columns for descriptive activity names
+
+For step five - created tidydata.txt file, with the average of each variable for the activity and each subject.
 
 The output for this assignment is the tidydata.txt file
