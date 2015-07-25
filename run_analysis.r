@@ -74,12 +74,14 @@ names(y_data) <- "activity"
 ## useful column name
 names(subject_data) <- "subject"
 
-## bind all the data in a single data set
+## bind all the data together in single set
 all_data <- cbind(x_data, y_data, subject_data)
 
-## Step 5 - From the data set in step 4, creates a second, independent tidy data set (tidydata.txt)
-##  with the average of each variable for each activity and each subject.
+## Step 5 - From the data set in step 4, creates a second, independent tidy data set
+##  with the average of each variable for each activity and each subject. -  (tidydata.txt)
 
 TidyData <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
 
 write.table(TidyData, "tidydata.txt", row.name=FALSE)
+
+
